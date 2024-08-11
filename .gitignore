@@ -11,6 +11,9 @@
 # Remove .env with credentials
 .env 
 
+# Remove Mac files
+.DS_Store
+
 # Test binary, built with `go test -c`
 *.test
 
