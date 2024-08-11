@@ -1,7 +1,7 @@
 # Bitcoin anti spam
 
 <div align="center">
-  <img class="logo" src="https://github.com/GaloisField2718/bitcoin-anti-spam/raw/master/assets/tg-spam-bg.png" width="400px" alt="Brussels Bitcoin Meetup | Logo"/>
+  <img class="logo" src="https://github.com/GaloisField2718/bitcoin-anti-spam/blob/master/assets/tg-spam-bg.png" width="400px" alt="Brussels Bitcoin Meetup | Logo"/>
 </div>
 
 
