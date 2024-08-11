@@ -1,6 +1,56 @@
-# tg-spam
+# Bitcoin anti spam
 
-TG-Spam is an effective, self-hosted anti-spam bot specifically crafted for Telegram groups. Setting it up is straightforward as a Docker container, needing just a Telegram token and a group name or ID for the user to get started. Once activated, TG-Spam oversees messages, leveraging an advanced spam detection methods to pinpoint and eliminate spam content.
+This is the code forked from [umputun/tg-spam](https://github.com/umputun/tg-spam).
+This is bot hosted in [Brussels Bitcoin Meetup Group](https://t.me/BrusselsBitcoinMeetupGroup).
+I built the repo with `make build` and the binary is into `.bin` folder. 
+
+The bot is computing spam probability to determine spamming messages. We can control the threshold required to ban user automatically (default: 50%, updated: 90%). [This can be discussed and choose by members]
+
+## TODO
+
+### Update forbidden words and spamming considerations
+In `data` directories there are rules for spam. 
+
+- `spam-samples.txt` - list of spam samples. Each line in this file is a full text of spam message with removed EOL. I.e. the orginal message represented as a single line. EOLs can be replaced by spaces
+- `ham-samples.txt` - list of ham (non-spam) samples. Each line in this file is a full text of ham message with removed EOL
+- `exclude-tokens.txt` - list of tokens to exclude from spam detection, usually common words. Each line in this file is a single token (word), or a comma-separated list of words in dbl-quotes.
+- `stop-words.txt` - list of stop words to detect spam right away. Each line in this file is a single phrase (can be one or more words). The bot checks if any of those phrases are present in the message and if so, it marks the message as spam.
+
+
+
+🫵  Read it, review it, create issues and discussions to make it in the best way possible. 
+
+### Create new functionnalities
+
+- Integrate a Lightning Bot to pay a small amount if you were spammers but you want to come back. It can be inspired by [Bitcoin Talk](https://bitcointalk.org) for publishing rules.
+- What can be cool to build with this? 
+
+
+## To Host on your server
+
+If other people want to host it, it's pretty easy from the binary. I don't recommend to use the Docker. 
+
+You can build the binary from source (you'll need to have go and do a `make build`). There is a small [issue](https://github.com/umputun/tg-spam/issues/111) where I describe the tiny modification I made of `go.mod` file. Feel free to check it if you want more details. 
+
+You can use directly the `.bin/tg-spam` binary if your server is running under linux.
+To create your bot please follow: [botfather](#botfather) 
+
+Required flags to run the binary are: 
+
+- `--telegram.token=, [$TELEGRAM_TOKEN]` - telegram bot token. See below how to get it.
+- `--telegram.group=, [$TELEGRAM_GROUP]` - group name/id. This can be a group name (for public groups it will lookg like `mygroup`) or group id (for private groups it will look like `-123456789`). To get the group id you can use [this bot](https://t.me/myidbot) or others like it.
+
+As long as theses two parameters are set, the bot will work. Don't forget to add the bot to the group as an admin, otherwise it will not be able to delete messages and ban users.
+
+## Current state of Bot running
+
+Currently used flags: 
+- `--message.startup="Hi, I will destroy spamming!"`  
+- `--min-msg-len=2`: To remove spams from 2 words messages. It can be reduced to 1 if necessary or augmented.
+- `--files.samples=/path/to/data`: I don't know if we should setup `--files.dynamic` too. 
+
+
+**You'll find the README from the original repo above. Feel free to check it if you need more details about the bot.**
 
 <div align="center">
   <img class="logo" src="https://github.com/umputun/tg-spam/raw/master/site/tg-spam-bg.png" width="400px" alt="TG-Spam | Spam Hunter"/>
@@ -167,6 +217,8 @@ Both dynamic spam and ham files are located in the directory set by `--files.dyn
 The default logging prints spam reports to the console (stdout). The bot can log all the spam messages to the file as well. To enable this feature, set `--logger.enabled, [$LOGGER_ENABLED]` to `true`. By default, the bot will log to the file `tg-spam.log` in the current directory. To change the location, set `--logger.file, [$LOGGER_FILE]` to the desired location. The bot will rotate the log file when it reaches the size specified in `--logger.max-size, [$LOGGER_MAX_SIZE]` (default is 100M). The bot will keep up to `--logger.max-backups, [$LOGGER_MAX_BACKUPS]` (default is 10) of the old, compressed log files.
 
 ## Setting up the telegram bot
+
+[//]: # (botfather)
 
 #### Getting the token
 
