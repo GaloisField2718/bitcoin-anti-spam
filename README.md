@@ -1,5 +1,10 @@
 # Bitcoin anti spam
 
+<div align="center">
+  <img class="logo" src="https://github.com/GaloisField2718/bitcoin-anti-spam/raw/master/assets/tg-spam-bg.png" width="400px" alt="Brussels Bitcoin Meetup | Logo"/>
+</div>
+
+
 This is the code forked from [umputun/tg-spam](https://github.com/umputun/tg-spam).
 This is bot hosted in [Brussels Bitcoin Meetup Group](https://t.me/BrusselsBitcoinMeetupGroup).
 I built the repo with `make build` and the binary is into `.bin` folder. 
