@@ -6,7 +6,7 @@
 
 
 This is the code forked from [umputun/tg-spam](https://github.com/umputun/tg-spam).
-This is bot hosted in [Brussels Bitcoin Meetup Group](https://t.me/BrusselsBitcoinMeetupGroup).
+This is the admin anti-spam bot for [Brussels Bitcoin Meetup Group](https://t.me/BrusselsBitcoinMeetupGroup).
 I built the repo with `make build` and the binary is into `.bin` folder. 
 
 The bot is computing spam probability to determine spamming messages. We can control the threshold required to ban user automatically (default: 50%, updated: 90%). [This can be discussed and choose by members]
