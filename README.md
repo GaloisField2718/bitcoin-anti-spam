@@ -12,11 +12,13 @@ The bot is computing spam probability to determine spamming messages. We can con
 In `data` directories there are rules for spam. 
 
 - `spam-samples.txt` - list of spam samples. Each line in this file is a full text of spam message with removed EOL. I.e. the orginal message represented as a single line. EOLs can be replaced by spaces
+	- Copy paste into this file some common spam messages we receive commonly in the group.
 - `ham-samples.txt` - list of ham (non-spam) samples. Each line in this file is a full text of ham message with removed EOL
+	- Give examples honest messages talking about news and using potential 'dangerous' words acceptable. 
 - `exclude-tokens.txt` - list of tokens to exclude from spam detection, usually common words. Each line in this file is a single token (word), or a comma-separated list of words in dbl-quotes.
+	- Give basic words for us that are not spamming. 
 - `stop-words.txt` - list of stop words to detect spam right away. Each line in this file is a single phrase (can be one or more words). The bot checks if any of those phrases are present in the message and if so, it marks the message as spam.
-
-
+	- Give most common spamming words refused in this group. 
 
 🫵  Read it, review it, create issues and discussions to make it in the best way possible. 
 
