@@ -1,6 +1,6 @@
 module github.com/umputun/tg-spam
 
-go 1.22
+go 1.22.0
 
 require (
 	github.com/didip/tollbooth/v7 v7.0.1

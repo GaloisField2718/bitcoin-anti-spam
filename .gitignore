@@ -8,6 +8,9 @@
 *.so
 *.dylib
 
+# Remove .env with credentials
+.env 
+
 # Test binary, built with `go test -c`
 *.test
 
@@ -19,7 +22,7 @@
 
 # Go workspace file
 go.work
-.bin
+#.bin
 
 .idea
 
