@@ -57,7 +57,8 @@ Currently used flags:
 - `--min-msg-len=2`: To remove spams from 2 words messages. It can be reduced to 1 if necessary or augmented.
 - `--files.samples=/path/to/data`: I don't know if we should setup `--files.dynamic` too.
 - `--max-emoji=5`.
-- `--super=`: Make some experimentation to whitelist fair well-known community members. 
+- `--super=`: Make some experimentation to whitelist fair well-known community members.
+- `--min-probability=97`: To avoid unfair ban. [Testing purpose]
 
 
 **You'll find the README from the original repo above. Feel free to check it if you need more details about the bot.**
