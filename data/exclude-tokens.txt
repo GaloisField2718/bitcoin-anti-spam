@@ -1,4 +1,6 @@
-"bitcoin", "btc", "Bitcoin", "Bitcoin Only", "btc 4 ever", "I love Bitcoin", "Bitcoin utopia", "Bitcoin is Future", "and", "the", "is", "in", "on", "at", "for", "with", "not",
+"bitcoin", "btc", "Bitcoin", "Bitcoin Only", "btc4ever", 
+"I love Bitcoin", "Bitcoin utopia", "Bitcoin is Future", 
+"and", "the", "is", "in", "on", "at", "for", "with", "not",
 "by", "be", "this", "are", "from", "or", "that", "an", "it",
 "his", "but", "he", "she", "as", "you", "do", "their", "all",
 "will", "there", "can", "i", "me", "my", "myself", "we", "our", "ours", "ourselves",
@@ -13,5 +15,6 @@
 "then", "once", "here", "why", "how", "any", "both", "each",
 "few", "more", "most", "other", "some", "such", "no", "nor",
 "only", "own", "same", "so", "than", "too", "very", "s", "t",
-"just", "don", "should", "now",
+"just", "don", "should", "now", "table", "bar", "meetup",
+"where",
 
