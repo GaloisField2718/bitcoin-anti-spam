@@ -38,3 +38,4 @@ logs/
 site/public/
 _examples/simplechat/messages.db
 .bin/tg-spam.log
+
